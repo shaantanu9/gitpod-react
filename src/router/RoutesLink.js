@@ -5,6 +5,7 @@ import React from 'react';
 import ProductDetail from '../components/ProductDetail' 
 import Home from '../components/Home' 
 import ProductList from '../components/ProductList';
+import Singup from '../components/Singup';
 
 //import {useState, useEffect,useRef} from 'react'
 //import Routes from './components/Routes' //importing the Routes component
@@ -27,6 +28,7 @@ return(
     {/* <Route exact path='/getuser/:id' element={<GetSpecificUserDetail/>} /> */}
     {/* <Route path='/login' element={</>} /> */}
     <Route path='/productlist' element={<ProductList/>} />
+    // <Route path='/signup' element={<Singup/>} />
     {/* // <Route path='/' element={</>} /> */}
 
 </Routes>
