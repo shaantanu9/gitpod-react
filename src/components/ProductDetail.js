@@ -5,22 +5,40 @@ import React from 'react';
 import axios from 'axios'
 const ProductDetail = (props)=>{
 
-    const [id] = useParams()
-    const [singleProduct, setProduct] = useState()
+    const {id} = useParams()
+    const [singleProduct, setProduct] = useState({})
     const url = `https://fakestoreapi.com/products/${id}`
     useEffect(()=>{
-        axios.fetch(url).then((res)=>{
-            console.log(res,"response API");
-            return setProduct(res.json())
-        })
+        axios.get(url).then((res)=>{
+            return setProduct(res.data)
+        }).then(
+
+        )
 
     },[]);
-    console.log(singleProduct,"product");
 
+    const {title, price, description, category, image, rating} = singleProduct;
+    console.log(title);
 return(
 <>
 
-<p className='animate-bounce bg-indigo-700'>Checking ProductDetail Component Working </p>
+<div className="flex justfy-between">
+    <div>
+        <img src={image} alt={title} className="max-h-[400px] max-w-2xl"/>
+    </div>
+        <div>
+            <h1 className="text-4xl " >{title}</h1>
+            <div className='flex justify-between text-sm'>
+            <p>{price}</p>
+            <p>{category}</p>
+            <p>{rating}</p>
+            </div>
+            <p>
+                {description}
+            </p>
+    
+        </div>
+</div>
 
 </>
 

@@ -1,5 +1,6 @@
 //import {useState, useEffect,useRef} from 'react'
 import React from 'react';
+import { Link } from 'react-router-dom';
 //import Navbar from './components/Navbar' //
 const Navbar = (props)=>{
 
@@ -7,7 +8,20 @@ const Navbar = (props)=>{
 return(
 <>
 
-<p className='animate-bounce bg-indigo-700'>Checking Navbar Component Working </p>
+<div className="flex justify-between">
+
+<div className="flex justify-between space-x-3">
+    <Link to="/">Home</Link>
+    <Link to="productlist">Product</Link>
+    <Link to="checkout">Checkout</Link>
+</div>
+<div className="flex justify-between space-x-3">
+    <Link to="login">Login</Link>
+    <Link to="signup">Singup</Link>
+    <Link to="cart">Cart</Link>
+</div>
+
+</div>
 
 </>
 
