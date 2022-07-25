@@ -18,20 +18,21 @@ const ProductDetail = (props)=>{
     },[]);
 
     const {title, price, description, category, image, rating} = singleProduct;
-    console.log(title);
+    console.log(rating);
+    // console.log(Object.keys(rating))
 return(
 <>
 
-<div className="flex justfy-between">
+<div className="flex justfy-start m-auto content-center ">
     <div>
-        <img src={image} alt={title} className="max-h-[400px] max-w-2xl"/>
+        <img src={image} alt={title} className="max-h-[40%] max-w-[40%]"/>
     </div>
         <div>
             <h1 className="text-4xl " >{title}</h1>
             <div className='flex justify-between text-sm'>
             <p>{price}</p>
             <p>{category}</p>
-            <p>{rating}</p>
+            {/* <p>{rating.rate}</p> */}
             </div>
             <p>
                 {description}

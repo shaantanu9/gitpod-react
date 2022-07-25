@@ -8,6 +8,7 @@ const Navbar = (props)=>{
 return(
 <>
 
+<div className="flex justify-between bg-blue-600 p-4 text-white">
 <div className="flex justify-between">
 
 <div className="flex justify-between space-x-3">
@@ -23,6 +24,7 @@ return(
 
 </div>
 
+</div>
 </>
 
 )

@@ -12,7 +12,7 @@ const Card = ({ obj }) => {
         <div>
         <div className="flex justify-center max-w-full">
           
-        <img src={image} alt={title} height='100px' width='250px' />
+        <img src={image} alt={title} height='100px' width='250px' className='hover:scale-110 rounded-xl' />
         </div>
         <div className='w-[90%]'>
           <p className='text-xl'>{title}</p>
