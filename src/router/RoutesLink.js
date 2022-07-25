@@ -2,6 +2,7 @@
 import { Route, Routes, BrowserRouter, Switch, Navigate } from 'react-router-dom';
 import React from 'react';
 // import LoginUser from '../components/LoginUser' //importing the LoginUser component
+import ProductDetail from '../components/ProductDetail' 
 
 //import {useState, useEffect,useRef} from 'react'
 //import Routes from './components/Routes' //importing the Routes component
@@ -18,6 +19,7 @@ return(
 <>
 <Routes>    
     {/* <Route exact path='/dashboard' element={ isLogged? <UserDashboard/>:<Navigate to='/login' replace /> } /> */}
+    <Route exact path='/productdetail/:id' element={ <ProductDetail/> } />
     {/* <Route exact path='/admin' element={isAdmin?<Admin/>:<Navigate to='/login' replace />}/> */}
     {/* <Route exact path='/getuser/:id' element={<GetSpecificUserDetail/>} /> */}
     {/* <Route path='/*' element={<LoginUser/>} /> */}
